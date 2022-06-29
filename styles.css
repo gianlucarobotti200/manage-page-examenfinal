@@ -4,6 +4,11 @@ body {
     
 }
 
+:root {
+    --naranjaleft: linear-gradient(to left, #f46b45, #eea849);
+    --naranjaright: linear-gradient(to right, #f46b45, #eea849);
+}
+
 html, body {
     max-width: 100% !important;
     overflow-x: hidden !important;
@@ -11,6 +16,7 @@ html, body {
 
 .botonNaranja {
     background-color: #F3603B;
+    background: var(--naranjaleft);
     border-radius: 50px;
     border-style: none;
     box-shadow: 0px 4px 8px rgba(243, 96, 59, 0.5);
@@ -21,8 +27,9 @@ html, body {
 }
 
 button.botonNaranja:hover {
-    background-color: #FFB265;
+    background: var(--naranjaright);
     transition: all .5s ease-in-out;
+    transform: scale(1.1);
 } 
 
 .botonBlanco {
@@ -39,6 +46,7 @@ button.botonNaranja:hover {
 button.botonBlanco:hover{
     color: #FFB265;
     transition: .5s;
+    transform: scale(1.1);
 }
 
 ::-webkit-scrollbar {
@@ -50,7 +58,7 @@ button.botonBlanco:hover{
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #F3603B
+    background: var(--naranjaleft)
 }
 /*-----------------HEADER-----------------*/
 
@@ -82,9 +90,14 @@ header a:link, header a:visited, header a:active {
     color: #242E52;
 }
 
-header nav ul li a:hover {
+header nav ul li:hover {
     color: #8C8C94;
     transition: .5s;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
 }
 
 /*-----------------FIN-HEADER-----------------*/
@@ -153,7 +166,7 @@ h4 {
 
 ul li h4.uno::before {
     content: "01";
-    background: #F3603B;
+    background: var(--naranjaright);
     border-radius: 30px;
     padding: 0.5rem 1.2rem;
     color: white;
@@ -162,7 +175,7 @@ ul li h4.uno::before {
 
 ul li h4.dos::before {
     content: "02";
-    background: #F3603B;
+    background: var(--naranjaright);
     border-radius: 30px;
     padding: 0.5rem 1.2rem;
     color: white;
@@ -171,7 +184,7 @@ ul li h4.dos::before {
 
 ul li h4.tres::before {
     content: "03";
-    background: #F3603B;
+    background: var(--naranjaright);
     border-radius: 30px;
     padding: 0.5rem 1.2rem;
     color: white;
@@ -187,6 +200,7 @@ section.section3 {
 }
 
 h6 {
+    font-size: ;
     color: #242E52;
 }
 
@@ -213,7 +227,7 @@ section.sArticles article{
 footer section.section1 {
     display: flex;
     justify-content: space-around;
-    background-color: #F3603B;
+    background: linear-gradient(to left, #f46b45, #eea849);
     color: white;
 }
 
@@ -277,8 +291,14 @@ footer a:link, footer a:visited, footer a:active {
 }
 
 footer ul li a:hover {
-    color: #F3603B;
+    color: #eea849;
     transition: .5s;
+    transform: scale(1.2);
+}
+
+footer ul li:hover {
+    transition: .5s;
+    transform: scale(1.2);
 }
 
 article.fArticle3{
@@ -431,6 +451,7 @@ article.fArticle3 p {
     }
 
     h6 {
+        margin: 1.5rem;
         font-size: 1.2rem;    
     }
 
@@ -445,7 +466,14 @@ article.fArticle3 p {
 
     article.fArticle3 form {
         padding-top: 0;
+        display: flex;
+        flex-wrap: nowrap;
     }
+
+    article.fArticle3 form input {
+        margin: 1rem;
+    }
+
 
     footer section.section1 {
         display: flex;
