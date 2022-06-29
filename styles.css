@@ -1,0 +1,347 @@
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin: 0;
+}
+
+.botonNaranja {
+    background-color: #F3603B;
+    border-radius: 50px;
+    border-style: none;
+    box-shadow: 0px 4px 8px rgba(243, 96, 59, 0.5);
+    color: white;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin: 1rem;
+    padding: 15px 30px;
+}
+
+button.botonNaranja:hover {
+    background-color: #FFB265;
+    transition: all .5s ease-in-out;
+} 
+
+.botonBlanco {
+    background-color: white;
+    border-radius: 50px;
+    border-style: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    color: #F3603B;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin: 1rem;
+    padding: 15px 30px; 
+}
+
+button.botonBlanco:hover{
+    color: #FFB265;
+    transition: .5s;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1E1E26;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #F3603B
+}
+/*-----------------HEADER-----------------*/
+
+header {
+    color: #242E52;
+    display: flex;
+    justify-content: space-around;
+}
+
+header img {
+    padding: 1.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    padding: 1rem;
+}
+
+header a:link, header a:visited, header a:active {
+    text-decoration:none;
+    color: #242E52;
+}
+
+header nav ul li a:hover {
+    color: #8C8C94;
+    transition: .5s;
+}
+
+/*-----------------FIN-HEADER-----------------*/
+
+/*-----------------MAIN-----------------*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parrafosH {
+    color: black;
+    font-size: 1em;
+}
+
+
+/*quiza deba usar pseudoselectores en esto*/
+ul li p, ol li p{
+    color: #B3B2B7;
+}
+
+ul li h4, ol li h4 {
+    color: #323851;
+}
+
+
+/*main.primerSection*/
+
+main {
+    margin: 5%;
+}
+
+h1 {
+    color: #242E52;
+    font-size: 3.6em;
+}
+
+main section.section1 {
+    display: flex;
+    margin: 5%;
+}
+
+/*main.segundoSection*/
+
+section.section2 h2, section.section3 h2{
+    color: #242E52;    
+}
+
+section.section2 {
+    display: flex;
+}
+
+section.section2 article ul {
+    list-style: none;
+}
+
+section.section2 article ul li p {
+    padding-left: 5rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+ul li h4.uno::before {
+    content: "01";
+    background: #F3603B;
+    border-radius: 30px;
+    padding: 0.5rem 1.2rem;
+    color: white;
+    margin-right: 1rem;
+}
+
+ul li h4.dos::before {
+    content: "02";
+    background: #F3603B;
+    border-radius: 30px;
+    padding: 0.5rem 1.2rem;
+    color: white;
+    margin-right: 1rem;
+}
+
+ul li h4::before {
+    content: "03";
+    background: #F3603B;
+    border-radius: 30px;
+    padding: 0.5rem 1.2rem;
+    color: white;
+    margin-right: 1rem;
+}
+
+/*main.tercerSection*/
+
+section.section3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.sArticles {
+    display: flex;
+    flex-direction: row;
+}
+
+section.sArticles article{
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+}
+
+/*-----------------FIN-MAIN-----------------*/
+
+/*-----------------FOOTER-----------------*/
+
+/*footer.primerSection*/
+
+footer section.section1 {
+    display: flex;
+    justify-content: space-around;
+    background-color: #F3603B;
+    color: white;
+}
+
+footer form input {
+    border-radius: 50px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    padding: 16px;
+}
+
+footer section.section2 {
+    background-color: #1E1E26;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+footer ul{
+    list-style: none;
+    padding: 1.5rem;
+}
+
+ul.redes {
+    color: white;
+    display: flex;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+ul.redes li {
+    padding: 1rem;
+}
+
+article.fArticle1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+article.fArticle1 img.logo {
+    padding: 2rem;
+}
+
+article.fArticle2 {
+    display: flex;
+    color: white;
+    font-weight: 400;
+    justify-content: space-around;
+}
+
+article.fArticle2 ul li {
+    padding: 1rem;
+}
+
+footer a:link, footer a:visited, footer a:active {
+    text-decoration:none;
+    color: white;
+}
+
+footer ul li a:hover {
+    color: #F3603B;
+    transition: .5s;
+}
+
+article.fArticle3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+article.fArticle3 form {
+    padding-top: 2.5rem;
+}
+
+article.fArticle3 p {
+    color: #8C8C94;
+    margin: 1rem;
+}
+
+/*footer.segundoSection*/
+
+
+
+/*-----------------FIN-FOOTER-----------------*/
+
+/*-----------------MEDIAS-----------------*/
+
+@media (max-width: 480px) {
+    /*-----------------HEADER-----------------*/
+
+    header {
+        color: #242E52;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+
+    header nav ul li{
+        display: none;
+    }
+
+    header button {
+        display: none;
+    }
+
+    header nav {
+        background-image: url("imagenes/icon-hamburger.svg");
+        background-repeat: no-repeat;
+        margin: 1.5rem;
+    }
+    
+    /*-----------------FIN-HEADER-----------------*/
+    /*-----------------MAIN-----------------*/
+
+    main article img {
+        width: 85vw;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    main section.section1 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    main section.section2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.section2 article ul {
+        padding-left: 0;
+    }
+    h4 {
+        font-size: 1em;
+    }
+
+
+    /*-----------------FIN-MAIN-----------------*/
+    /*-----------------FOOTER-----------------*/
+    /*-----------------FIN-FOOTER-----------------*/
+}
