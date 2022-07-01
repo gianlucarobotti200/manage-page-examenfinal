@@ -1,7 +1,6 @@
 body {
     font-family: 'Be Vietnam Pro', sans-serif;
     margin: 0;
-    
 }
 
 :root {
@@ -76,6 +75,11 @@ header nav input {
     display: none;
 }
 
+header a:link, header a:visited, header a:active {
+    text-decoration:none;
+    color: #242E52;
+}
+
 header nav ul {
     list-style: none;
     display: flex;
@@ -94,10 +98,6 @@ header nav ul li:hover {
     color: #8C8C94;
     transition: .5s;
     transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
 }
 
 /*-----------------FIN-HEADER-----------------*/
@@ -110,14 +110,7 @@ main {
     align-items: center;
 }
 
-.parrafosH {
-    color: black;
-    font-size: 1em;
-}
-
-
-/*quiza deba usar pseudoselectores en esto*/
-ul li p, ol li p{
+ul li p{
     color: #B3B2B7;
 }
 
@@ -200,7 +193,7 @@ section.section3 {
 }
 
 h6 {
-    font-size: ;
+    font-size: 1.5rem;
     color: #242E52;
 }
 
@@ -216,6 +209,17 @@ section.sArticles article{
     align-items: center;
     text-align: center;
     margin: 1rem;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+section.sArticles article:hover {
+    transition: .5s ease;
+    transform: scale(1.1);
+    border: solid 2px rgb(255, 115, 0);
 }
 
 /*-----------------FIN-MAIN-----------------*/
@@ -317,9 +321,6 @@ article.fArticle3 p {
 }
 /*-----------------FIN-FOOTER-----------------*/
 
-
-/*HAMBURGER MENU*/
-
 /*-----------------MEDIAS-----------------*/
 
 @media (max-width: 480px) {
@@ -387,13 +388,57 @@ article.fArticle3 p {
         margin-top: 0px;
         transform: rotate(-405deg);
     }
+
+    .menu-button-container {
+        display: flex;
+    }
+    
+    .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #menu-toggle ~ .menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    
+    #menu-toggle:checked ~ .menu li {
+        border: 1px solid #242E52;
+        height: 1.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    
+    .menu > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: white;
+    }
+    
+    .menu > li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
         /*FIN-HAMBURGUER MENU*/
+
     header {
         color: #242E52;
         display: flex;
         justify-content: space-between;
     }
-    
 
     header nav ul li{
         display: none;
@@ -443,6 +488,11 @@ article.fArticle3 p {
 
     h4 {
         font-size: 85%;
+    }
+
+    section.section2 article ul li p {
+        padding-left: 0;
+        text-align: center;
     }
 
     section.sArticles {
@@ -517,44 +567,7 @@ article.fArticle3 p {
     
     /*HAMBURGER MENU*/
 
-    .menu-button-container {
-        display: flex;
-    }
-    .menu {
-        position: absolute;
-        top: 0;
-        margin-top: 50px;
-        left: 0;
-        flex-direction: column;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-    #menu-toggle ~ .menu li {
-        height: 0;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    }
-    #menu-toggle:checked ~ .menu li {
-        border: 1px solid #242E52;
-        height: 2.5em;
-        padding: 0.5em;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    }
-    .menu > li {
-        display: flex;
-        justify-content: center;
-        margin: 0;
-        padding: 0.5em 0;
-        width: 100%;
-        color: white;
-        background-color: white;
-    }
-    .menu > li:not(:last-child) {
-        border-bottom: 1px solid #444;
-    }
+    
     /*FIN-HAMBURGUER MENU*/
 }
 
